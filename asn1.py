@@ -131,6 +131,26 @@ def MoveAllMotors(m1, m2, m3, m4, m5, m6, m7, m8):
 	response = setMotorTargetPositionCommand(7, m7)
 	response = setMotorTargetPositionCommand(8, m8)
 
+def MoveAllMotorsLeft(m1, m2, m3, m4, m5, m6, m7, m8):
+	response = setMotorTargetPositionCommand(1, m2) 
+	response = setMotorTargetPositionCommand(2, m4)
+	response = setMotorTargetPositionCommand(3, m1)
+	response = setMotorTargetPositionCommand(4, m3)
+	response = setMotorTargetPositionCommand(5, m6)
+	response = setMotorTargetPositionCommand(6, m8)
+	response = setMotorTargetPositionCommand(7, m5)
+	response = setMotorTargetPositionCommand(8, m7)
+
+def MoveAllMotorsRight(m1,m2,m3,m4,m5,m6,m7,m8):
+	response = setMotorTargetPositionCommand(1, m3) 
+	response = setMotorTargetPositionCommand(2, m1)
+	response = setMotorTargetPositionCommand(3, m4)
+	response = setMotorTargetPositionCommand(4, m2)
+	response = setMotorTargetPositionCommand(5, m7)
+	response = setMotorTargetPositionCommand(6, m5)
+	response = setMotorTargetPositionCommand(7, m8)
+	response = setMotorTargetPositionCommand(8, m6)
+
 def ReadAllMotors():
 	m1 = getMotorPositionCommand(1)
 	m2 = getMotorPositionCommand(2)
@@ -169,12 +189,14 @@ if __name__ == "__main__":
 	#ReadAllMotors()
 	# 1 is tLeft, 2 is tRight, 3 is bLeft, 4 is bRight (main motors)
 	# 5 is tLeft, 6 is tRight, 7 is bLeft, 8 is bRight (ankles)
-
+	#			 tLeft,tRi, bLef,bRi,tLef,tRig,bLef,bRig)
 	MoveAllMotors(198, 516, 840, 500, 159, 817, 857, 180)# put right side forward, left legs out
 	MoveAllMotors(198, 747, 840, 500, 159, 720, 857, 180)# right front leg extended
 	MoveAllMotors(517, 819, 528, 206, 159, 774, 818, 184)# left side forward, right side extended, 819 is off
 	MoveAllMotors(274, 819, 493, 220, 381, 840, 800, 158)# raise left leg halfway
 	MoveAllMotors(183, 505, 819, 484, 182, 832, 834, 356)# push back
+
+
 
 
 
