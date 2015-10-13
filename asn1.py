@@ -197,7 +197,12 @@ if __name__ == "__main__":
 	MoveAllMotors(183, 505, 819, 484, 182, 832, 834, 356)# push back
 
 
-
+def MoveRight():
+		MoveAllMotors(230,516,840,600,180,817,810,180)
+		MoveAllMotors(230,516,840,369,180,817,810,83)
+		MoveAllMotors(542,229,1024,297,140,797,806,29) #1024 should be 1234
+		MoveAllMotors(542,229,1024,297,140,616,806,29)
+		MoveAllMotors(542,396,1024,297,140,616,806,0) #0 should be -47
 
 
 	#HandMotionSensor() #Behavior one
